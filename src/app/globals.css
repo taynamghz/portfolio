@@ -56,21 +56,22 @@
   margin-top: 0.5rem;
 }
 
-/* Inline images in case studies */
+/* Images inside case studies — 64px above and below */
 .case-body figure {
-  margin: 2.5rem auto;
-  max-width: 480px;
-  text-align: center;
+  margin-top: 4rem !important;
+  margin-bottom: 4rem !important;
 }
 
 .case-body figure img {
-  width: 100%;
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .case-body figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.8125rem;
+  margin-top: 0.625rem;
+  font-size: 0.75rem;
   font-style: italic;
   color: #666;
+  text-align: center;
 }

@@ -31,12 +31,12 @@ export default function Page() {
 
         {/* ─── SELECTED WORK ───────────────────────────────────── */}
         <section className="mb-20 md:mb-28">
-          <div className="mb-0">
+          <div>
             <h2 className="text-lg font-semibold">Selected work</h2>
             <p className="text-sm text-muted mt-1">Four projects, in order of recency.</p>
           </div>
 
-          {/* ── Index ───────────────────────────────────────────── */}
+          {/* ── Index ─────────────────────────────────────────── */}
           <div className="mt-20 mb-20">
             <ol className="space-y-3 pl-1">
               {[
@@ -47,10 +47,7 @@ export default function Page() {
               ].map((item, i) => (
                 <li key={item.id} className="flex gap-4 items-baseline pl-2">
                   <span className="text-muted text-sm tabular-nums flex-shrink-0 w-4">{i + 1}.</span>
-                  <a
-                    href={`#${item.id}`}
-                    className="text-sm text-ink leading-relaxed"
-                  >
+                  <a href={`#${item.id}`} className="text-sm text-ink leading-relaxed">
                     {item.slug} &mdash; {item.title}
                   </a>
                 </li>
@@ -58,10 +55,10 @@ export default function Page() {
             </ol>
           </div>
 
-          {/* ── Case Studies ────────────────────────────────────── */}
+          {/* ── Case Studies ──────────────────────────────────── */}
           <div>
 
-            {/* PROJECT 01: SARJ AI */}
+            {/* ─ PROJECT 01: SARJ AI ──────────────────────────── */}
             <CaseStudy
               id="sarj-ai"
               slug="SARJ AI"
@@ -71,19 +68,20 @@ export default function Page() {
             >
               <h3>The company</h3>
               <p>
-                Sarj is a Saudi AI startup building voice agents that handle customer calls for GCC enterprises.
-                The product is engineered around a specific bet: the agent should sound human enough that the
-                caller doesn&rsquo;t realize they&rsquo;re not talking to one &mdash; and when escalation to a
-                real human is needed, it should happen in a way that feels considered rather than abrupt.
+                Sarj is a Saudi AI startup building voice agents that handle customer calls for GCC
+                enterprises. The product is engineered around a specific bet: the agent should sound human
+                enough that the caller doesn&rsquo;t realize they&rsquo;re not talking to one &mdash; and
+                when escalation to a real human is needed, it should happen in a way that feels considered
+                rather than abrupt.
               </p>
               <p>
-                What makes the bet harder than it sounds is language. Sarj&rsquo;s agents work in Saudi dialect
-                Arabic specifically, not Modern Standard Arabic &mdash; and they handle multiple dialects,
-                alongside expansion into English and Urdu. International voice AI players don&rsquo;t reach the
-                dialect-level naturalness that GCC enterprise customers actually need. A &ldquo;good enough&rdquo;
-                Arabic agent isn&rsquo;t good enough; if the caller hears the wrong stress on a word, the
-                illusion collapses, the trust collapses, and the client&rsquo;s brand takes the hit. Sarj is
-                built around that gap.
+                What makes the bet harder than it sounds is language. Sarj&rsquo;s agents work in Saudi
+                dialect Arabic specifically, not Modern Standard Arabic &mdash; and they handle multiple
+                dialects, alongside expansion into English and Urdu. International voice AI players
+                don&rsquo;t reach the dialect-level naturalness that GCC enterprise customers actually need.
+                A &ldquo;good enough&rdquo; Arabic agent isn&rsquo;t good enough; if the caller hears the
+                wrong stress on a word, the illusion collapses, the trust collapses, and the client&rsquo;s
+                brand takes the hit. Sarj is built around that gap.
               </p>
               <p>
                 I joined as a co-op in QA and worked across the seven months into product and AI engineering.
@@ -106,11 +104,19 @@ export default function Page() {
                 it sounds.
               </p>
               <p>
-                This is the kind of work that doesn&rsquo;t have a glamorous name, but it&rsquo;s the foundation
-                everything else sits on. Service design at the team-operations level: identifying how a team
-                actually works, where the gaps are, and redesigning the workflow so the gaps stop costing the
-                business.
+                This is the kind of work that doesn&rsquo;t have a glamorous name, but it&rsquo;s the
+                foundation everything else sits on. Service design at the team-operations level: identifying
+                how a team actually works, where the gaps are, and redesigning the workflow so the gaps stop
+                costing the business.
               </p>
+
+              <CaseImage
+                src="/images/sarj/sarj-roadmap.png"
+                alt="Sarj QA roadmap diagram"
+                caption="Roadmap for evolving Sarj's QA function from process foundation to continuous improvement."
+                maxWidth={480}
+                border
+              />
 
               <h3>The headline project: redefining what counts as a &ldquo;failed&rdquo; call</h3>
               <p>
@@ -118,18 +124,18 @@ export default function Page() {
                 it&rsquo;s the clearest example of the kind of product thinking I want to keep doing.
               </p>
               <p>
-                When I started, every call our voice agents handled was labeled binary: success or failure. The
-                label fed directly into the KPI reports our clients saw. The problem with the labeling &mdash;
-                which I noticed gradually across the QA work &mdash; is that it was structurally misleading.
-                The agent could perform exactly as designed and still get marked as failure, because the caller
-                was out of scope. Someone calling our client&rsquo;s customer service line for a question the
-                agent wasn&rsquo;t built to handle would end the call unsatisfied; the label said the agent
-                failed; the report said your AI is underperforming; the client thought they&rsquo;d bought a
-                worse system than they had.
+                When I started, every call our voice agents handled was labeled binary: success or failure.
+                The label fed directly into the KPI reports our clients saw. The problem with the labeling
+                &mdash; which I noticed gradually across the QA work &mdash; is that it was structurally
+                misleading. The agent could perform exactly as designed and still get marked as failure,
+                because the caller was out of scope. Someone calling our client&rsquo;s customer service line
+                for a question the agent wasn&rsquo;t built to handle would end the call unsatisfied; the
+                label said the agent failed; the report said your AI is underperforming; the client thought
+                they&rsquo;d bought a worse system than they had.
               </p>
               <p>
-                The fix wasn&rsquo;t a better failure detector. It was a different question entirely: was this
-                caller someone the agent was supposed to help in the first place?
+                The fix wasn&rsquo;t a better failure detector. It was a different question entirely: was
+                this caller someone the agent was supposed to help in the first place?
               </p>
               <p>
                 I proposed the reframe to my manager early. It wasn&rsquo;t prioritized &mdash; fair enough,
@@ -161,12 +167,12 @@ export default function Page() {
 
               <h3>Why I think this work mattered</h3>
               <p>
-                The insight that took longer to land isn&rsquo;t the technical one. It&rsquo;s the framing one.
-                The default move for a QA engineer faced with misleading metrics is to build a better failure
-                detector. The harder move is to ask whether the metric itself is shaped wrong. Sarj&rsquo;s
-                clients weren&rsquo;t getting a noisy signal; they were getting a structurally biased signal,
-                and no amount of detection-tuning would have fixed it. The architecture of the measurement was
-                the problem.
+                The insight that took longer to land isn&rsquo;t the technical one. It&rsquo;s the framing
+                one. The default move for a QA engineer faced with misleading metrics is to build a better
+                failure detector. The harder move is to ask whether the metric itself is shaped wrong.
+                Sarj&rsquo;s clients weren&rsquo;t getting a noisy signal; they were getting a structurally
+                biased signal, and no amount of detection-tuning would have fixed it. The architecture of the
+                measurement was the problem.
               </p>
               <p>
                 That distinction &mdash; better measurement vs. different measurement &mdash; is the one
@@ -193,40 +199,42 @@ export default function Page() {
                 </li>
               </ul>
               <p>
-                I also moved between QA and feature-level engineering work as the team needed, testing platform
-                endpoints, debugging integrations, and supporting new feature releases on the engineering side.
+                I also moved between QA and feature-level engineering work as the team needed, testing
+                platform endpoints, debugging integrations, and supporting new feature releases on the
+                engineering side.
               </p>
 
               <h3>What I&rsquo;m taking from Sarj</h3>
               <p>Two things, both relevant to where I want to go next.</p>
               <p>
-                The first is that the most useful work in a small AI company is rarely the work you were hired
-                to do. I was hired as a co-op in QA. The work I&rsquo;m proudest of came from noticing things
-                that weren&rsquo;t anyone&rsquo;s job to notice &mdash; the absence of a release process, the
-                structural flaw in the call-labeling, the gap between what clients were seeing and what the
-                agents were actually doing. None of that was assigned to me. All of it shipped because I
-                proposed it.
+                The first is that the most useful work in a small AI company is rarely the work you were
+                hired to do. I was hired as a co-op in QA. The work I&rsquo;m proudest of came from noticing
+                things that weren&rsquo;t anyone&rsquo;s job to notice &mdash; the absence of a release
+                process, the structural flaw in the call-labeling, the gap between what clients were seeing
+                and what the agents were actually doing. None of that was assigned to me. All of it shipped
+                because I proposed it.
               </p>
               <p>
                 The second is that AI products live or die on trust, and trust is a design problem.
                 Sarj&rsquo;s voice agents work because they sound human; the moment they don&rsquo;t, the
-                product fails. The same is true at the metric layer: clients trust the product when the reports
-                they see reflect what&rsquo;s actually happening. My job, when I look back on the seven months,
-                was to design the systems that hold the trust together &mdash; the QA process that prevents
-                broken features from reaching clients, the sentiment analysis that gives clients an honest read
-                on their agents&rsquo; performance, the documentation that makes the work auditable.
+                product fails. The same is true at the metric layer: clients trust the product when the
+                reports they see reflect what&rsquo;s actually happening. My job, when I look back on the
+                seven months, was to design the systems that hold the trust together &mdash; the QA process
+                that prevents broken features from reaching clients, the sentiment analysis that gives clients
+                an honest read on their agents&rsquo; performance, the documentation that makes the work
+                auditable.
               </p>
               <p>
-                That&rsquo;s the kind of work I want to keep doing. AI is going to be deployed at scale across
-                this region over the next few years, and almost all of it will rise or fall on whether the
-                people deploying it can trust what it&rsquo;s doing. That&rsquo;s the design problem of the
-                decade for the GCC, and it&rsquo;s the one I want to be in the middle of.
+                That&rsquo;s the kind of work I want to keep doing. AI is going to be deployed at scale
+                across this region over the next few years, and almost all of it will rise or fall on whether
+                the people deploying it can trust what it&rsquo;s doing. That&rsquo;s the design problem of
+                the decade for the GCC, and it&rsquo;s the one I want to be in the middle of.
               </p>
             </CaseStudy>
 
             <Divider />
 
-            {/* PROJECT 02: RASD */}
+            {/* ─ PROJECT 02: RASD ─────────────────────────────── */}
             <CaseStudy
               id="rasd"
               slug="RASD"
@@ -234,32 +242,40 @@ export default function Page() {
               meta="Senior project · Prince Sultan University · Partners: CEER Motors, Riyadh Municipality · Now: incorporated as a startup · 2025"
               readTime="5 min read"
             >
+              {/* Hero image — immediately after metadata, before first section */}
+              <CaseImage
+                src="/images/rasd/rasd-presenting.jpg"
+                alt="Presenting the RASD architecture on stage"
+                caption="Presenting the RASD architecture, 2025."
+                maxWidth={600}
+              />
+
               <h3>The starting point</h3>
               <p>
                 Saudi Arabia is building roads, vehicles, and a national EV brand faster than the systems
-                designed to keep them safe can keep up. Unreported potholes and unregistered speed bumps damage
-                cars, cause accidents, and create maintenance backlogs the Municipality can&rsquo;t see in real
-                time. The longer a pothole stays unrepaired, the more it costs the city to fix.
+                designed to keep them safe can keep up. Unreported potholes and unregistered speed bumps
+                damage cars, cause accidents, and create maintenance backlogs the Municipality can&rsquo;t
+                see in real time. The longer a pothole stays unrepaired, the more it costs the city to fix.
               </p>
               <p>
-                I wanted to build a system that detects these road anomalies, alerts the driver in the moment,
-                and reports the location to the people responsible for fixing it. That was the original idea.
-                What it became is something different &mdash; and that&rsquo;s the part this case study is
-                about.
+                I wanted to build a system that detects these road anomalies, alerts the driver in the
+                moment, and reports the location to the people responsible for fixing it. That was the
+                original idea. What it became is something different &mdash; and that&rsquo;s the part this
+                case study is about.
               </p>
 
               <h3>Why this needed real partners, not a lab</h3>
               <p>
-                Existing ADAS (advanced driver-assistance) systems are built on computer vision pipelines tuned
-                for European roads: high-contrast asphalt, vivid lane markings, regulated bump geometry. Saudi
-                roads are a different problem. Faded paint, mixed surface conditions, illegal speed bumps with
-                no standard dimensions, and potholes that come and go with construction cycles. A system trained
-                in Europe doesn&rsquo;t transfer.
+                Existing ADAS (advanced driver-assistance) systems are built on computer vision pipelines
+                tuned for European roads: high-contrast asphalt, vivid lane markings, regulated bump
+                geometry. Saudi roads are a different problem. Faded paint, mixed surface conditions, illegal
+                speed bumps with no standard dimensions, and potholes that come and go with construction
+                cycles. A system trained in Europe doesn&rsquo;t transfer.
               </p>
               <p>
-                I knew I couldn&rsquo;t validate this with a literature review. I needed engineers who had felt
-                the problem in the field, and a public-sector stakeholder who would actually use the output.
-                So I pitched the project to two of them.
+                I knew I couldn&rsquo;t validate this with a literature review. I needed engineers who had
+                felt the problem in the field, and a public-sector stakeholder who would actually use the
+                output. So I pitched the project to two of them.
               </p>
 
               <h3>Bringing CEER and the Municipality into the project</h3>
@@ -271,13 +287,28 @@ export default function Page() {
                 online sessions and presentations at CEER&rsquo;s headquarters.
               </p>
               <p>
-                In parallel, we engaged Riyadh Municipality to understand the maintenance side of the problem.
-                They told us about the real economic and operational cost of late pothole detection, and they
-                gave us a requirement we hadn&rsquo;t anticipated: geolocate every detected speed bump so they
-                could identify which ones were legal and which were unregistered installations. That single
-                requirement reframed the project. We weren&rsquo;t building a driver-assist feature anymore.
-                We were building infrastructure intelligence.
+                In parallel, we engaged Riyadh Municipality to understand the maintenance side of the
+                problem. They told us about the real economic and operational cost of late pothole detection,
+                and they gave us a requirement we hadn&rsquo;t anticipated: geolocate every detected speed
+                bump so they could identify which ones were legal and which were unregistered installations.
+                That single requirement reframed the project. We weren&rsquo;t building a driver-assist
+                feature anymore. We were building infrastructure intelligence.
               </p>
+
+              <CaseImage
+                src="/images/rasd/rasd-team.jpg"
+                alt="The RASD team in front of the project poster"
+                caption="The RASD team at the project's final presentation. The CEER partnership is credited on the poster."
+                maxWidth={600}
+              />
+
+              {/* rasd-stakeholders.png — upload clean rebuild to replace this placeholder */}
+              <ImagePlaceholder
+                label="rasd-stakeholders.png — upload to /public/images/rasd/"
+                caption="Internal/external stakeholder structure: internal communication with the team, external communication with CEER Motors and Riyadh Municipality."
+                maxWidth={480}
+                border
+              />
 
               <h3>The insight that changed the design</h3>
               <p>
@@ -286,27 +317,22 @@ export default function Page() {
               <p>
                 The first was a test drive in one of CEER&rsquo;s own vehicles, running their existing ADAS
                 stack. Their stack, designed against European conditions, struggled in Saudi roads in the ways
-                we expected &mdash; but seeing the failure modes in their car, rather than reading about them,
-                made the gap concrete. Lane-marking-only detection can&rsquo;t be the foundation of perception
-                in an environment where lane markings are often degraded or absent. The system needed to reason
-                about the road geometrically, not just visually.
+                we expected &mdash; but seeing the failure modes in their car, rather than reading about
+                them, made the gap concrete. Lane-marking-only detection can&rsquo;t be the foundation of
+                perception in an environment where lane markings are often degraded or absent. The system
+                needed to reason about the road geometrically, not just visually.
               </p>
               <p>
                 The second was an honest piece of feedback in an early review: our camera choice wasn&rsquo;t
-                industry-appropriate. We had picked based on what was available; production ADAS systems specify
-                focal length, resolution, and mounting geometry to match the vehicle and the use case. We
-                couldn&rsquo;t replace the hardware in our timeline, but we adapted around it &mdash; adjusting
-                the algorithm and effective field of view in software, and redesigning the perception pipeline
-                to compensate. CEER&rsquo;s engineers also pushed our software stack toward real automotive
-                practice: better threading, more rigorous processing architecture, the kind of structure that
-                would survive integration with a production vehicle rather than a benchtop demo.
+                industry-appropriate. We had picked based on what was available; production ADAS systems
+                specify focal length, resolution, and mounting geometry to match the vehicle and the use
+                case. We couldn&rsquo;t replace the hardware in our timeline, but we adapted around it
+                &mdash; adjusting the algorithm and effective field of view in software, and redesigning the
+                perception pipeline to compensate. CEER&rsquo;s engineers also pushed our software stack
+                toward real automotive practice: better threading, more rigorous processing architecture,
+                the kind of structure that would survive integration with a production vehicle rather than a
+                benchtop demo.
               </p>
-
-              {/* Replace with <img> once image is in /public/images/ */}
-              <ImagePlaceholder
-                label="Image: RASD test vehicle / CEER presentation"
-                caption="Test drive in a CEER vehicle, October 2025"
-              />
 
               <h3>What we ended up building</h3>
               <p>A two-tier perception and detection system, designed for Saudi road conditions:</p>
@@ -330,6 +356,14 @@ export default function Page() {
               </ul>
               <p>The system was demonstrated to CEER and reviewed twice formally by the Municipality.</p>
 
+              {/* rasd-architecture.png — upload clean rebuild to replace this placeholder */}
+              <ImagePlaceholder
+                label="rasd-architecture.png — upload to /public/images/rasd/"
+                caption="System architecture: sensor fusion pipeline from camera and LiDAR inputs through real-time alert and cloud logging."
+                maxWidth={480}
+                border
+              />
+
               <h3>The hardest part</h3>
               <p>
                 The deadline. We were trying to deliver a V0 R&amp;D prototype at industry-credible quality,
@@ -351,9 +385,9 @@ export default function Page() {
               <h3>What this taught me</h3>
               <p>
                 The thing I&rsquo;ll take into the next role: an ADAS system isn&rsquo;t a piece of software.
-                It&rsquo;s a system that lives in a specific place, designed for the conditions of that place,
-                accountable to the people who pay for the consequences of road damage. The decision that
-                mattered most wasn&rsquo;t an algorithm choice &mdash; it was the choice to bring two
+                It&rsquo;s a system that lives in a specific place, designed for the conditions of that
+                place, accountable to the people who pay for the consequences of road damage. The decision
+                that mattered most wasn&rsquo;t an algorithm choice &mdash; it was the choice to bring two
                 stakeholders with very different problems into the same project early enough that the design
                 could answer to both of them. The technical work followed from that.
               </p>
@@ -361,7 +395,7 @@ export default function Page() {
 
             <Divider />
 
-            {/* PROJECT 03: ETMA'EN */}
+            {/* ─ PROJECT 03: ETMA'EN ──────────────────────────── */}
             <CaseStudy
               id="etmaen"
               slug="ETMA'EN"
@@ -371,18 +405,18 @@ export default function Page() {
             >
               <h3>The constraint everyone else was ignoring</h3>
               <p>
-                A patient seeing three doctors at three hospitals in Saudi Arabia is, in effect, three different
-                patients. Each hospital holds a partial view of their medication history. The conflict-checking
-                only runs against what one system can see. The cost shows up as adverse drug events and
-                avoidable readmissions.
+                A patient seeing three doctors at three hospitals in Saudi Arabia is, in effect, three
+                different patients. Each hospital holds a partial view of their medication history. The
+                conflict-checking only runs against what one system can see. The cost shows up as adverse
+                drug events and avoidable readmissions.
               </p>
               <p>
                 The obvious solution is to consolidate the data across hospitals. That solution isn&rsquo;t
-                going to exist here. There&rsquo;s no legal framework for cross-hospital medical data sharing,
-                and no individual hospital has the authority to participate in one. Every team I&rsquo;ve seen
-                tackle this problem starts with &ldquo;we&rsquo;ll unify the records&rdquo; and stalls at the
-                point where they realize unification isn&rsquo;t a technical problem &mdash; it&rsquo;s
-                institutional.
+                going to exist here. There&rsquo;s no legal framework for cross-hospital medical data
+                sharing, and no individual hospital has the authority to participate in one. Every team
+                I&rsquo;ve seen tackle this problem starts with &ldquo;we&rsquo;ll unify the records&rdquo;
+                and stalls at the point where they realize unification isn&rsquo;t a technical problem
+                &mdash; it&rsquo;s institutional.
               </p>
               <p>
                 The question I steered the team toward, once I understood the gap: can you do
@@ -422,12 +456,6 @@ export default function Page() {
                 write-ups; another teammate built the patient-facing app.
               </p>
 
-              {/* Replace with <img> once image is in /public/images/ */}
-              <ImagePlaceholder
-                label="Image: the RFID reader hardware prototype"
-                caption="The RFID-based hardware reader, demonstrating point-of-care medication checking."
-              />
-
               <h3>What we validated, and what I&rsquo;d do differently</h3>
               <p>
                 The team ran formal usability evaluations on the app side with documented informed consent
@@ -447,17 +475,24 @@ export default function Page() {
               <h3>What it became</h3>
               <p>
                 Etma&rsquo;en won 1st place at the PSU AI Hackathon under the Ministry of Health&rsquo;s
-                umbrella. What I take from the project is more specific than the win: the hardest problems in
-                healthcare design aren&rsquo;t technical &mdash; they&rsquo;re institutional, legal, and
+                umbrella. What I take from the project is more specific than the win: the hardest problems
+                in healthcare design aren&rsquo;t technical &mdash; they&rsquo;re institutional, legal, and
                 cultural. The role of the designer isn&rsquo;t to build the best system in the abstract.
                 It&rsquo;s to find the system that can actually exist inside the constraints the environment
                 will impose.
               </p>
+
+              <CaseImage
+                src="/images/etmaen/etmaen-team.png"
+                alt="The Etma'en team at the PSU AI Hackathon"
+                caption="The Etma'en team at the PSU AI Hackathon under the Ministry of Health, 2024. From left: Mira Kasem, Aljowharah Aljubair, myself, Leen Hashem."
+                maxWidth={600}
+              />
             </CaseStudy>
 
             <Divider />
 
-            {/* PROJECT 04: RUWAD & ECOSHAHEEN */}
+            {/* ─ PROJECT 04: RUWAD & ECOSHAHEEN ──────────────── */}
             <CaseStudy
               id="ruwad"
               slug="RUWAD & ECOSHAHEEN"
@@ -477,19 +512,19 @@ export default function Page() {
                 it to them.
               </p>
               <p>
-                Students with my background in Syria don&rsquo;t have those pathways. Not because they&rsquo;re
-                less capable. Because the conditions of the country &mdash; political, economic,
-                infrastructural &mdash; have kept the education system in a state most students can&rsquo;t
-                change. Meanwhile, the world outside is moving fast. Autonomous vehicles, AI, embedded
-                systems, the same fields I&rsquo;ve been working in are reshaping the labor market and the
-                geography of opportunity. Syrian students of my generation are sitting offline, in a
+                Students with my background in Syria don&rsquo;t have those pathways. Not because
+                they&rsquo;re less capable. Because the conditions of the country &mdash; political,
+                economic, infrastructural &mdash; have kept the education system in a state most students
+                can&rsquo;t change. Meanwhile, the world outside is moving fast. Autonomous vehicles, AI,
+                embedded systems, the same fields I&rsquo;ve been working in are reshaping the labor market
+                and the geography of opportunity. Syrian students of my generation are sitting offline, in a
                 development gap that compounds the longer it lasts.
               </p>
               <p>
                 I came to a position I couldn&rsquo;t ignore: I&rsquo;d been given opportunities I
                 didn&rsquo;t earn alone, in a country that took me in and built me up. Students like me
-                &mdash; same age, same background &mdash; shouldn&rsquo;t be locked out of the same kind of
-                growth because of where the lines on the map happen to fall. I started Ruwad to begin
+                &mdash; same age, same background &mdash; shouldn&rsquo;t be locked out of the same kind
+                of growth because of where the lines on the map happen to fall. I started Ruwad to begin
                 closing that gap, one team at a time.
               </p>
 
@@ -529,10 +564,11 @@ export default function Page() {
                 problem, which is the part of EcoShaheen I&rsquo;m currently doing the most direct work on.
               </p>
 
-              {/* Replace with <img> once image is in /public/images/ */}
-              <ImagePlaceholder
-                label="Image: EcoShaheen team at Shell Eco-marathon"
+              <CaseImage
+                src="/images/ecoshaheen/ecoshaheen-team.JPG"
+                alt="The EcoShaheen team at Shell Eco-marathon Doha"
                 caption="The EcoShaheen team at Shell Eco-marathon Doha technical inspection."
+                maxWidth={600}
               />
 
               <h3>The design problem inside the sponsorship proposal</h3>
@@ -547,13 +583,13 @@ export default function Page() {
               <p>
                 For Syrian teams, that risk read is harder. There&rsquo;s no recent track record of
                 comparable teams. The institutional context is unfamiliar to most corporate sponsors. The
-                decision-making isn&rsquo;t &ldquo;back the favorite&rdquo; &mdash; it&rsquo;s &ldquo;decide
-                whether to back something untested.&rdquo;
+                decision-making isn&rsquo;t &ldquo;back the favorite&rdquo; &mdash; it&rsquo;s
+                &ldquo;decide whether to back something untested.&rdquo;
               </p>
               <p>
-                I&rsquo;ve been reworking the sponsorship proposal around that reality. The pitch I&rsquo;m
-                building now doesn&rsquo;t lead with the team&rsquo;s talent or the competition&rsquo;s
-                prestige. It leads with three things the sponsor actually needs to know:
+                I&rsquo;ve been reworking the sponsorship proposal around that reality. The pitch
+                I&rsquo;m building now doesn&rsquo;t lead with the team&rsquo;s talent or the
+                competition&rsquo;s prestige. It leads with three things the sponsor actually needs to know:
               </p>
               <ul>
                 <li>
@@ -630,18 +666,18 @@ export default function Page() {
               engineered in Europe by a serious team with serious budgets, didn&rsquo;t work on Saudi roads.
             </p>
             <p>
-              The system relied on lane markings. Saudi roads, in many places, don&rsquo;t have lane markings
-              &mdash; or have markings degraded enough to fail under standard computer vision. The asphalt is
-              a different color than what the model was trained on. The road geometry is bumpier. There are
-              speed bumps that nobody registered with the municipality. The European system wasn&rsquo;t a bad
-              system. It was a system designed for a road that was somewhere else.
+              The system relied on lane markings. Saudi roads, in many places, don&rsquo;t have lane
+              markings &mdash; or have markings degraded enough to fail under standard computer vision. The
+              asphalt is a different color than what the model was trained on. The road geometry is bumpier.
+              There are speed bumps that nobody registered with the municipality. The European system
+              wasn&rsquo;t a bad system. It was a system designed for a road that was somewhere else.
             </p>
             <p>
-              The conventional response would have been to try to make our roads look more like European ones.
-              The other response &mdash; the one we landed on with CEER &mdash; was to design a perception
-              stack that doesn&rsquo;t depend on the road behaving the way you wish it would. Multi-signal
-              lane detection that fuses color, surface contrast, and depth geometry. A system that holds up
-              when any single signal fails, because something will always fail.
+              The conventional response would have been to try to make our roads look more like European
+              ones. The other response &mdash; the one we landed on with CEER &mdash; was to design a
+              perception stack that doesn&rsquo;t depend on the road behaving the way you wish it would.
+              Multi-signal lane detection that fuses color, surface contrast, and depth geometry. A system
+              that holds up when any single signal fails, because something will always fail.
             </p>
             <p>
               That project, RASD, became a startup. But more usefully for me, it became a way of seeing.
@@ -653,8 +689,8 @@ export default function Page() {
               can&rsquo;t. Cross-hospital data sharing isn&rsquo;t a technical problem in Saudi Arabia;
               it&rsquo;s a regulatory one with no near-term solution. Every team I&rsquo;ve watched tackle
               this problem starts with &ldquo;we&rsquo;ll unify the records&rdquo; and stalls. The
-              architecture we ended up with &mdash; patient data lives only on the patient&rsquo;s phone, a
-              tap-based hardware reader runs the conflict check locally, the clinician sees only a binary
+              architecture we ended up with &mdash; patient data lives only on the patient&rsquo;s phone,
+              a tap-based hardware reader runs the conflict check locally, the clinician sees only a binary
               result &mdash; works because it doesn&rsquo;t ask anyone to do something they can&rsquo;t
               legally do. The constraint stopped being the blocker and became the feature.
             </p>
@@ -662,9 +698,9 @@ export default function Page() {
               When I was at Sarj AI, working on QA for voice agents, I spent months watching client KPIs
               come out wrong. The agents were performing fine. The labels were broken. Every call ended up
               tagged as success or failure, and the failure tag was capturing both genuine agent errors and
-              callers who simply weren&rsquo;t in the agent&rsquo;s scope. Clients were getting reports that
-              misrepresented their own systems. The fix wasn&rsquo;t a better failure detector &mdash; that
-              would have been more of the same. The fix was to design a different measurement entirely:
+              callers who simply weren&rsquo;t in the agent&rsquo;s scope. Clients were getting reports
+              that misrepresented their own systems. The fix wasn&rsquo;t a better failure detector &mdash;
+              that would have been more of the same. The fix was to design a different measurement entirely:
               sentiment-aware analysis that read the user&rsquo;s actual ask, classified scope separately
               from outcome, and gave clients an honest read of what their agents were doing. We weren&rsquo;t
               measuring better. We were measuring something else.
@@ -686,8 +722,8 @@ export default function Page() {
               practice of looking carefully at why something doesn&rsquo;t work yet, and then refusing to
               accept the framing that something is impossible just because the obvious path is blocked. Most
               institutional gaps &mdash; the legal ones, the technical ones, the resource ones &mdash;
-              aren&rsquo;t gaps in the strictest sense. They&rsquo;re constraints that the existing solutions
-              were never designed to handle. A different design can sometimes route around them.
+              aren&rsquo;t gaps in the strictest sense. They&rsquo;re constraints that the existing
+              solutions were never designed to handle. A different design can sometimes route around them.
             </p>
             <p>
               What I&rsquo;ve come to believe, from four years of working across engineering, research,
@@ -712,27 +748,32 @@ export default function Page() {
         {/* ─── ABOUT / CV ──────────────────────────────────────── */}
         <section id="about" className="mb-20 md:mb-28">
           <h2 className="text-lg font-semibold mb-8">About</h2>
-          <div className="flex flex-col md:flex-row gap-7 items-start mb-5">
-            {/* Replace src with actual photo once uploaded to /public/images/ */}
-            <div className="flex-shrink-0 w-[200px] h-[200px] bg-gray-100 flex items-center justify-center text-xs text-muted text-center leading-relaxed rounded">
-              Photo
-            </div>
-            <div className="space-y-5">
-              <p className="text-base">
-                I&rsquo;m based in Riyadh. I studied Software Engineering at Prince Sultan University, with
-                a track in AI and Data Science. Before that, I grew up in Syria. The two contexts &mdash;
-                what I had access to in Riyadh and what students with my background in Damascus don&rsquo;t
-                &mdash; shape most of the work I do.
-              </p>
-              <p className="text-base">
-                The work that doesn&rsquo;t appear above includes the Saudi Space Agency case study
-                competition (Best Solution, 2025), Industry 4.0 Lab where I&rsquo;ve been Programming Head
-                since 2022, the Sahem Social Entrepreneurship Hackathon (1st place, King Khalid Foundation),
-                VEX Robotics and Sumo Robot competitions at Saudi Robotics Federation and PSU, and the Shell
-                Eco-marathon Autonomous entry I&rsquo;m currently leading as perception and software lead
-                for PSU ECO TEAM III.
-              </p>
-            </div>
+          {/*
+            Float right on desktop so text wraps; stack above on mobile.
+            overflow-auto on the container creates a block formatting context
+            that expands to contain the floated image.
+          */}
+          <div className="overflow-auto mb-5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/me/about-taynam.jpg"
+              alt="Taynam Alzamel"
+              className="block w-full mb-6 md:float-right md:ml-8 md:mb-4 md:w-[300px]"
+            />
+            <p className="text-base mb-5">
+              I&rsquo;m based in Riyadh. I studied Software Engineering at Prince Sultan University, with a
+              track in AI and Data Science. Before that, I grew up in Syria. The two contexts &mdash; what I
+              had access to in Riyadh and what students with my background in Damascus don&rsquo;t &mdash;
+              shape most of the work I do.
+            </p>
+            <p className="text-base">
+              The work that doesn&rsquo;t appear above includes the Saudi Space Agency case study competition
+              (Best Solution, 2025), Industry 4.0 Lab where I&rsquo;ve been Programming Head since 2022, the
+              Sahem Social Entrepreneurship Hackathon (1st place, King Khalid Foundation), VEX Robotics and
+              Sumo Robot competitions at Saudi Robotics Federation and PSU, and the Shell Eco-marathon
+              Autonomous entry I&rsquo;m currently leading as perception and software lead for PSU ECO
+              TEAM III.
+            </p>
           </div>
           <p className="text-sm text-muted">
             <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
@@ -762,8 +803,8 @@ export default function Page() {
           </div>
           <p className="text-base">
             I&rsquo;m in Riyadh and open to conversations about innovation work, AI product design, and
-            regional engineering initiatives &mdash; particularly anything intersecting Vision 2030 with
-            the design questions I&rsquo;m interested in.
+            regional engineering initiatives &mdash; particularly anything intersecting Vision 2030 with the
+            design questions I&rsquo;m interested in.
           </p>
         </section>
 
@@ -815,21 +856,65 @@ function CaseStudy({ id, slug, title, meta, readTime, children }: CaseStudyProps
   )
 }
 
+type CaseImageProps = {
+  src: string
+  alt: string
+  caption?: string
+  maxWidth?: number
+  border?: boolean
+}
+
+function CaseImage({ src, alt, caption, maxWidth = 600, border = false }: CaseImageProps) {
+  return (
+    <figure>
+      <div style={{ maxWidth, margin: '0 auto' }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={src}
+          alt={alt}
+          className={`block w-full h-auto${border ? ' border border-gray-200' : ''}`}
+        />
+        {caption && (
+          <figcaption className="text-xs italic text-muted mt-2.5 text-center">
+            {caption}
+          </figcaption>
+        )}
+      </div>
+    </figure>
+  )
+}
+
+function ImagePlaceholder({
+  label,
+  caption,
+  maxWidth = 480,
+  border = false,
+}: {
+  label: string
+  caption: string
+  maxWidth?: number
+  border?: boolean
+}) {
+  return (
+    <figure>
+      <div style={{ maxWidth, margin: '0 auto' }}>
+        <div
+          className={`flex items-center justify-center py-12 text-xs text-muted text-center px-6 leading-relaxed bg-gray-50 border-dashed border border-gray-300${border ? '' : ''}`}
+        >
+          {label}
+        </div>
+        <figcaption className="text-xs italic text-muted mt-2.5 text-center">
+          {caption}
+        </figcaption>
+      </div>
+    </figure>
+  )
+}
+
 function Divider() {
   return (
     <div className="flex justify-center" style={{ margin: '60px 0' }}>
       <hr className="w-20 border-0 border-t border-gray-200" />
     </div>
-  )
-}
-
-function ImagePlaceholder({ label, caption }: { label: string; caption: string }) {
-  return (
-    <figure className="my-8">
-      <div className="mx-auto max-w-[480px] bg-gray-100 rounded flex items-center justify-center py-16 text-sm text-muted text-center px-6 leading-relaxed">
-        {label}
-      </div>
-      <figcaption className="text-center text-xs italic text-muted mt-3">{caption}</figcaption>
-    </figure>
   )
 }
