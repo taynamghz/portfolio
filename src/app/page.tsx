@@ -302,13 +302,7 @@ export default function Page() {
                 maxWidth={600}
               />
 
-              {/* rasd-stakeholders.png — upload clean rebuild to replace this placeholder */}
-              <ImagePlaceholder
-                label="rasd-stakeholders.png — upload to /public/images/rasd/"
-                caption="Internal/external stakeholder structure: internal communication with the team, external communication with CEER Motors and Riyadh Municipality."
-                maxWidth={480}
-                border
-              />
+              <StakeholdersCard />
 
               <h3>The insight that changed the design</h3>
               <p>
@@ -356,11 +350,11 @@ export default function Page() {
               </ul>
               <p>The system was demonstrated to CEER and reviewed twice formally by the Municipality.</p>
 
-              {/* rasd-architecture.png — upload clean rebuild to replace this placeholder */}
-              <ImagePlaceholder
-                label="rasd-architecture.png — upload to /public/images/rasd/"
+              <CaseImage
+                src="/images/rasd/rasd-architecture.png"
+                alt="RASD system architecture diagram"
                 caption="System architecture: sensor fusion pipeline from camera and LiDAR inputs through real-time alert and cloud logging."
-                maxWidth={480}
+                maxWidth={600}
                 border
               />
 
@@ -905,6 +899,58 @@ function ImagePlaceholder({
         </div>
         <figcaption className="text-xs italic text-muted mt-2.5 text-center">
           {caption}
+        </figcaption>
+      </div>
+    </figure>
+  )
+}
+
+function StakeholdersCard() {
+  return (
+    <figure>
+      <div style={{ maxWidth: 560, margin: '0 auto' }}>
+        <div className="border border-gray-200 bg-white">
+          <div className="grid grid-cols-2">
+
+            {/* Internal communication */}
+            <div className="flex flex-col items-center gap-5 px-8 py-8 border-r border-gray-200">
+              <p className="text-[9px] uppercase tracking-widest text-muted">
+                Internal Communication
+              </p>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/rasd/clickuplogo.png"
+                alt="ClickUp"
+                className="h-6 w-auto"
+              />
+            </div>
+
+            {/* External communication */}
+            <div className="flex flex-col items-center gap-5 px-8 py-8">
+              <p className="text-[9px] uppercase tracking-widest text-muted">
+                External Communication
+              </p>
+              <div className="flex items-center justify-center gap-6">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/rasd/ceer-new-logo.png"
+                  alt="CEER Motors"
+                  className="h-5 w-auto"
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/rasd/municipality-logo.png"
+                  alt="Riyadh Municipality"
+                  className="h-10 w-auto"
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <figcaption className="text-xs italic text-muted mt-2.5 text-center">
+          Stakeholder structure: ClickUp for internal team communication; CEER Motors and Riyadh
+          Municipality as external partners.
         </figcaption>
       </div>
     </figure>
