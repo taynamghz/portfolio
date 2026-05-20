@@ -544,6 +544,12 @@ export default function Page() {
                 Ruwad is real &mdash; not just an idea.
               </p>
 
+              <CaseImage
+                src="/images/ecoshaheen/ecoshaheenlogos.png"
+                alt="Ruwad and EcoShaheen logos"
+                maxWidth={480}
+              />
+
               <h3>EcoShaheen: the first flagship</h3>
               <p>
                 EcoShaheen is a team of formally enrolled Damascus University students preparing to compete
@@ -561,7 +567,7 @@ export default function Page() {
               <CaseImage
                 src="/images/ecoshaheen/ecoshaheen-team.JPG"
                 alt="The EcoShaheen team at Shell Eco-marathon Doha"
-                caption="The EcoShaheen team at Shell Eco-marathon Doha technical inspection."
+                caption="Shell Eco-marathon technical inspection — competing before founding EcoShaheen. This experience is what led to starting Ruwad."
                 maxWidth={600}
               />
 
