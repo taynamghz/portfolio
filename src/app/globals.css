@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #FAFAF7;
+    color: #1A1A1A;
+    font-family: var(--font-lora), Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    line-height: 1.65;
+  }
+
+  /* Subtle underline on all links; darkens on hover */
+  a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #ccc;
+    transition: text-decoration-color 0.15s ease;
+  }
+
+  a:hover {
+    text-decoration-color: #1A1A1A;
+  }
+}
+
+/* Section headings inside case study bodies (h4) */
+.case-body h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: #1A1A1A;
+}
+
+/* Inline images in case studies */
+.case-body figure {
+  margin: 2.5rem auto;
+  max-width: 480px;
+  text-align: center;
+}
+
+.case-body figure img {
+  width: 100%;
+  display: block;
+}
+
+.case-body figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  font-style: italic;
+  color: #666;
+}
