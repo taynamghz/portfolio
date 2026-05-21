@@ -521,8 +521,8 @@ export default function Page() {
             >
               <h3>Why this exists</h3>
               <p>
-                I grew up Syrian and studied at Prince Sultan University in Riyadh. Across four years, I
-                watched what&rsquo;s possible when students have access to the right institutional pathways.
+                I studied at Prince Sultan University in Riyadh. Across four years, I watched what&rsquo;s
+                possible when students have access to the right institutional pathways.
                 The Saudi Space Agency runs case study competitions. The Saudi Robotics Federation organizes
                 international VEX tournaments. The Ministry of Environment runs Industry 4.0 hackathons.
                 Shell Eco-marathon sends qualified teams to Doha. National OEMs like CEER take student senior
@@ -912,9 +912,8 @@ export default function Page() {
           </div>
           <p className="text-base mb-5">
             I&rsquo;m based in Riyadh. I studied Software Engineering at Prince Sultan University, with a
-            track in AI and Data Science. Before that, I grew up in Syria. The two contexts &mdash; what I
-            had access to in Riyadh and what students with my background in Damascus don&rsquo;t &mdash;
-            shape most of the work I do.
+            track in AI and Data Science. The gap between what students here have access to and what students
+            in Damascus often don&rsquo;t &mdash; shapes most of the work I do.
           </p>
           <p className="text-base mb-5">
             The work that doesn&rsquo;t appear above includes the Saudi Space Agency case study competition
