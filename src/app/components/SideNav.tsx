@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const NAV_ITEMS = [
   { id: 'sarj-ai', label: 'Sarj AI' },
@@ -14,6 +14,8 @@ const NAV_ITEMS = [
 
 export default function SideNav() {
   const [active, setActive] = useState('')
+  const [opacity, setOpacity] = useState(1)
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,14 +36,27 @@ export default function SideNav() {
       if (el) observer.observe(el)
     })
 
-    return () => observer.disconnect()
+    const resetTimer = () => {
+      setOpacity(1)
+      if (timerRef.current) clearTimeout(timerRef.current)
+      timerRef.current = setTimeout(() => setOpacity(0.4), 3000)
+    }
+
+    window.addEventListener('scroll', resetTimer, { passive: true })
+    timerRef.current = setTimeout(() => setOpacity(0.4), 3000)
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', resetTimer)
+      if (timerRef.current) clearTimeout(timerRef.current)
+    }
   }, [])
 
   return (
     <nav
       aria-label="Page sections"
       className="hidden xl:block fixed left-6 z-50"
-      style={{ top: '30vh' }}
+      style={{ top: '30vh', opacity, transition: 'opacity 300ms ease' }}
     >
       <ul className="flex flex-col gap-3.5">
         {NAV_ITEMS.map(({ id, label }) => {
@@ -55,8 +70,10 @@ export default function SideNav() {
                 }`}
               >
                 <span
-                  className={`inline-block h-px w-3 flex-shrink-0 transition-colors duration-200 ${
-                    isActive ? 'bg-ink' : 'bg-transparent'
+                  className={`inline-block flex-shrink-0 rounded-full transition-all duration-200 ${
+                    isActive
+                      ? 'bg-ink w-[5px] h-[5px]'
+                      : 'bg-[#ccc] w-[3px] h-[3px]'
                   }`}
                 />
                 {label}

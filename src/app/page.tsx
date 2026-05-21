@@ -10,14 +10,25 @@ export default function Page() {
       <main id="top" className="mx-auto max-w-content px-6 py-20 md:py-28">
 
         {/* ─── HERO ─────────────────────────────────────────────── */}
-        <section className="mb-20 md:mb-28">
-          <h1 className="text-2xl font-semibold mb-3 tracking-tight">
-            Taynam Alzamel
-          </h1>
-          <p className="text-muted mb-7 leading-relaxed">
-            Designer and engineer working in Riyadh, on systems that route around
-            the constraints they were meant to solve for.
-          </p>
+        <section className="mb-0">
+          <div className="flex items-start justify-between gap-6 mb-7">
+            <div>
+              <h1 className="text-2xl font-semibold mb-3 tracking-tight">
+                Taynam Alzamel
+              </h1>
+              <p className="text-muted leading-relaxed">
+                Designer and engineer working in Riyadh, on systems that route around
+                the constraints they were meant to solve for.
+              </p>
+            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/me/about-taynam.jpg"
+              alt="Taynam Alzamel"
+              className="hidden md:block flex-shrink-0"
+              style={{ width: 100, height: 100, objectFit: 'cover', borderRadius: 4 }}
+            />
+          </div>
           <p className="text-base">
             I&rsquo;m a software engineering graduate from Prince Sultan University,
             currently doing co-op product and AI work at Sarj AI in Riyadh. I work
@@ -28,6 +39,14 @@ export default function Page() {
             team, EcoShaheen, is qualified for Shell Eco-marathon Doha.
           </p>
         </section>
+
+        {/* ─── EPIGRAPH ─────────────────────────────────────────── */}
+        <div className="text-center" style={{ padding: '80px 0' }}>
+          <p className="text-[1.2rem] italic text-ink">
+            The most useful thing I&rsquo;ve learned about design is that constraints
+            aren&rsquo;t problems to remove. They&rsquo;re the shape of the answer.
+          </p>
+        </div>
 
         {/* ─── SELECTED WORK ───────────────────────────────────── */}
         <section className="mb-20 md:mb-28">
@@ -68,20 +87,13 @@ export default function Page() {
             >
               <h3>The company</h3>
               <p>
-                Sarj is a Saudi AI startup building voice agents that handle customer calls for GCC
-                enterprises. The product is engineered around a specific bet: the agent should sound human
-                enough that the caller doesn&rsquo;t realize they&rsquo;re not talking to one &mdash; and
-                when escalation to a real human is needed, it should happen in a way that feels considered
-                rather than abrupt.
-              </p>
-              <p>
-                What makes the bet harder than it sounds is language. Sarj&rsquo;s agents work in Saudi
-                dialect Arabic specifically, not Modern Standard Arabic &mdash; and they handle multiple
-                dialects, alongside expansion into English and Urdu. International voice AI players
-                don&rsquo;t reach the dialect-level naturalness that GCC enterprise customers actually need.
-                A &ldquo;good enough&rdquo; Arabic agent isn&rsquo;t good enough; if the caller hears the
-                wrong stress on a word, the illusion collapses, the trust collapses, and the client&rsquo;s
-                brand takes the hit. Sarj is built around that gap.
+                Sarj is a Saudi AI startup building voice agents for GCC enterprise customers. The product is
+                engineered around one specific bet: the agent should sound human enough that callers
+                don&rsquo;t realize they aren&rsquo;t talking to one &mdash; and in dialect-level Saudi
+                Arabic, with multi-dialect range plus English and Urdu. International voice AI doesn&rsquo;t
+                reach that naturalness. A &ldquo;good enough&rdquo; Arabic agent isn&rsquo;t good enough; if
+                the caller hears the wrong stress on a word, the illusion collapses, the trust collapses, and
+                the client&rsquo;s brand takes the hit. Sarj is built around that gap.
               </p>
               <p>
                 I joined as a co-op in QA and worked across the seven months into product and AI engineering.
@@ -204,7 +216,6 @@ export default function Page() {
                 engineering side.
               </p>
 
-              <h3>What I&rsquo;m taking from Sarj</h3>
               <p>Two things, both relevant to where I want to go next.</p>
               <p>
                 The first is that the most useful work in a small AI company is rarely the work you were
@@ -376,7 +387,6 @@ export default function Page() {
               </p>
               <p>The senior project is the V0 of a company.</p>
 
-              <h3>What this taught me</h3>
               <p>
                 The thing I&rsquo;ll take into the next role: an ADAS system isn&rsquo;t a piece of software.
                 It&rsquo;s a system that lives in a specific place, designed for the conditions of that
@@ -438,6 +448,14 @@ export default function Page() {
                 is most of the world&rsquo;s healthcare systems, not just Saudi Arabia&rsquo;s.
               </p>
 
+              <CaseImage
+                src="/images/etmaen/etmaen-journey.png"
+                alt="Etma'en user journey diagram"
+                caption="User journey: how a patient and clinician experience a medication-conflict check at the point of care — from doctor's prescription through tap verification to pharmacy handoff."
+                maxWidth={560}
+                border
+              />
+
               <h3>My role on the team</h3>
               <p>
                 On a four-person team, I focused on the conceptual core and the hardware. I shaped the
@@ -466,7 +484,6 @@ export default function Page() {
                 feature someone has to pay for, train staff on, and justify to a procurement committee.
               </p>
 
-              <h3>What it became</h3>
               <p>
                 Etma&rsquo;en won 1st place at the PSU AI Hackathon under the Ministry of Health&rsquo;s
                 umbrella. What I take from the project is more specific than the win: the hardest problems
@@ -633,7 +650,6 @@ export default function Page() {
                 honest position is to take this stage seriously without confusing it for the destination.
               </p>
 
-              <h3>Where this connects to the work I want to do next</h3>
               <p>
                 The two things I&rsquo;ve been doing in parallel &mdash; building technical systems with
                 industrial and government partners (RASD, Etma&rsquo;en, Sarj) and building institutional
@@ -653,14 +669,15 @@ export default function Page() {
         {/* ─── NOTES ───────────────────────────────────────────── */}
         <section id="notes" className="mb-20 md:mb-28">
           <div className="mb-10">
-            <h2 className="text-lg font-semibold">Notes</h2>
-            <p className="text-sm text-muted mt-1">A piece of writing about how I think about my work.</p>
+            <h2 className="text-xl font-semibold">Notes</h2>
+            <p className="text-base italic mt-2">A piece of writing about how I think about my work.</p>
           </div>
+          <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">Essay</p>
           <h3 className="text-xl font-semibold mb-8 tracking-tight">
             On designing around constraints
           </h3>
           <div className="space-y-5 text-base">
-            <p>
+            <p className="text-[1.1rem] leading-[1.85]">
               The first useful thing I learned about design didn&rsquo;t come from a design class. It came
               from sitting across from a CEER engineer who was explaining why their ADAS system, the one
               engineered in Europe by a serious team with serious budgets, didn&rsquo;t work on Saudi roads.
@@ -747,34 +764,29 @@ export default function Page() {
 
         {/* ─── ABOUT / CV ──────────────────────────────────────── */}
         <section id="about" className="mb-20 md:mb-28">
-          <h2 className="text-lg font-semibold mb-8">About</h2>
-          {/*
-            Float right on desktop so text wraps; stack above on mobile.
-            overflow-auto on the container creates a block formatting context
-            that expands to contain the floated image.
-          */}
-          <div className="overflow-auto mb-5">
+          <h2 className="text-lg font-semibold mb-12">About</h2>
+          <div className="flex justify-center mb-12">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/me/about-taynam.jpg"
               alt="Taynam Alzamel"
-              className="block w-full mb-6 md:float-right md:ml-8 md:mb-4 md:w-[300px]"
+              className="w-full md:w-[400px]"
             />
-            <p className="text-base mb-5">
-              I&rsquo;m based in Riyadh. I studied Software Engineering at Prince Sultan University, with a
-              track in AI and Data Science. Before that, I grew up in Syria. The two contexts &mdash; what I
-              had access to in Riyadh and what students with my background in Damascus don&rsquo;t &mdash;
-              shape most of the work I do.
-            </p>
-            <p className="text-base">
-              The work that doesn&rsquo;t appear above includes the Saudi Space Agency case study competition
-              (Best Solution, 2025), Industry 4.0 Lab where I&rsquo;ve been Programming Head since 2022, the
-              Sahem Social Entrepreneurship Hackathon (1st place, King Khalid Foundation), VEX Robotics and
-              Sumo Robot competitions at Saudi Robotics Federation and PSU, and the Shell Eco-marathon
-              Autonomous entry I&rsquo;m currently leading as perception and software lead for PSU ECO
-              TEAM III.
-            </p>
           </div>
+          <p className="text-base mb-5">
+            I&rsquo;m based in Riyadh. I studied Software Engineering at Prince Sultan University, with a
+            track in AI and Data Science. Before that, I grew up in Syria. The two contexts &mdash; what I
+            had access to in Riyadh and what students with my background in Damascus don&rsquo;t &mdash;
+            shape most of the work I do.
+          </p>
+          <p className="text-base mb-5">
+            The work that doesn&rsquo;t appear above includes the Saudi Space Agency case study competition
+            (Best Solution, 2025), Industry 4.0 Lab where I&rsquo;ve been Programming Head since 2022, the
+            Sahem Social Entrepreneurship Hackathon (1st place, King Khalid Foundation), VEX Robotics and
+            Sumo Robot competitions at Saudi Robotics Federation and PSU, and the Shell Eco-marathon
+            Autonomous entry I&rsquo;m currently leading as perception and software lead for PSU ECO
+            TEAM III.
+          </p>
           <p className="text-sm text-muted">
             <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
               Download CV (PDF) &rarr;
@@ -916,38 +928,40 @@ function StakeholdersCard() {
     <figure>
       <div style={{ maxWidth: 560, margin: '0 auto' }}>
         <div className="border border-gray-200 bg-white">
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-2 divide-x divide-gray-200">
 
-            {/* Internal communication */}
-            <div className="flex flex-col items-center gap-5 px-8 py-8 border-r border-gray-200">
-              <p className="text-[9px] uppercase tracking-widest text-muted">
+            {/* Internal — ClickUp centered vertically */}
+            <div className="flex flex-col items-center justify-center gap-6 p-8">
+              <p className="text-[9px] uppercase tracking-widest text-muted text-center">
                 Internal Communication
               </p>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/rasd/clickuplogo.png"
                 alt="ClickUp"
-                className="h-6 w-auto"
+                style={{ width: 108, height: 30, objectFit: 'contain' }}
               />
             </div>
 
-            {/* External communication */}
-            <div className="flex flex-col items-center gap-5 px-8 py-8">
-              <p className="text-[9px] uppercase tracking-widest text-muted">
+            {/* External — CEER + Municipality stacked, equal width budget */}
+            <div className="flex flex-col items-center justify-center gap-6 p-8">
+              <p className="text-[9px] uppercase tracking-widest text-muted text-center">
                 External Communication
               </p>
-              <div className="flex items-center justify-center gap-6">
+              <div className="flex flex-col items-center gap-5">
+                {/* CEER: wide wordmark — give it width room */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/rasd/ceer-new-logo.png"
                   alt="CEER Motors"
-                  className="h-5 w-auto"
+                  style={{ width: 108, height: 30, objectFit: 'contain' }}
                 />
+                {/* Municipality: circular — square box */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/rasd/municipality-logo.png"
                   alt="Riyadh Municipality"
-                  className="h-10 w-auto"
+                  style={{ width: 48, height: 48, objectFit: 'contain' }}
                 />
               </div>
             </div>
@@ -966,7 +980,7 @@ function StakeholdersCard() {
 function Divider() {
   return (
     <div className="flex justify-center" style={{ margin: '60px 0' }}>
-      <hr className="w-20 border-0 border-t border-gray-200" />
+      <span className="text-gray-300 text-xs select-none">◆</span>
     </div>
   )
 }
