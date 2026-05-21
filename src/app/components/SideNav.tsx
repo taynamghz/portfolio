@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react'
 const NAV_ITEMS = [
   { id: ‘sarj-ai’, label: ‘Sarj AI’ },
   { id: ‘rasd’, label: ‘RASD’ },
-  { id: ‘etmaen’, label: ‘Etma’en’ },
+  { id: ‘etmaen’, label: "Etma’en" },
   { id: ‘ruwad’, label: ‘Ruwad & EcoShaheen’ },
   { id: ‘notes’, label: ‘Notes’ },
   { id: ‘interface-design’, label: ‘Interface Design’ },
