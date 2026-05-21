@@ -41,8 +41,16 @@ export default function Page() {
         </section>
 
         {/* ─── EPIGRAPH ─────────────────────────────────────────── */}
-        <div className="text-center" style={{ padding: '80px 0' }}>
-          <p className="text-[1.2rem] italic text-ink">
+        <div className="flex justify-center" style={{ padding: '100px 0' }}>
+          <p
+            className="italic text-ink text-center"
+            style={{
+              fontSize: '1.4rem',
+              letterSpacing: '0.02em',
+              lineHeight: 1.4,
+              maxWidth: 560,
+            }}
+          >
             The most useful thing I&rsquo;ve learned about design is that constraints
             aren&rsquo;t problems to remove. They&rsquo;re the shape of the answer.
           </p>
@@ -758,6 +766,135 @@ export default function Page() {
               hasn&rsquo;t been built before, on timelines that don&rsquo;t allow for waiting. That&rsquo;s
               exactly the design problem I find interesting. It&rsquo;s the one I&rsquo;d like to spend my
               career on.
+            </p>
+          </div>
+        </section>
+
+        {/* ─── INTERFACE DESIGN ────────────────────────────────── */}
+        <section id="interface-design" className="mb-20 md:mb-28">
+          <div className="mb-10">
+            <h2 className="text-xl font-semibold">Selected interface design</h2>
+            <p className="text-base italic mt-2">
+              Three projects in Figma and Cursor, across financial products, real-time telemetry,
+              and retail systems. Included to show craft directly &mdash; design work needs to be
+              seen, not only described.
+            </p>
+          </div>
+
+          {/* ── INVST+ ────────────────────────────────────────── */}
+          <div>
+            <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">
+              INVST+ &middot; Financial Planning App
+            </p>
+            <h3 className="text-lg font-semibold mb-3 tracking-tight">
+              Financial planning app, end-to-end
+            </h3>
+            <p className="text-base italic mb-8">
+              A financial planning and investment app designed end-to-end as a course project.
+              Covers onboarding, personalized goal-setting, budgeting visualization, and a crypto
+              wallet dashboard. Visual system, typography, and component patterns mine.
+            </p>
+            {/* Phone mockups — row on desktop, stack on mobile */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-5">
+              {['invst-1', 'invst-2', 'invst-3'].map((slug) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={slug}
+                  src={`/images/addons/${slug}.png`}
+                  alt={`INVST+ screen ${slug.slice(-1)}`}
+                  className="w-full max-w-[280px] md:max-w-none md:flex-1"
+                  style={{ maxHeight: 480, objectFit: 'contain' }}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* ── PSU Telemetry ─────────────────────────────────── */}
+          <div style={{ marginTop: 80 }}>
+            <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">
+              PSU ECO TEAM &middot; Real-Time Telemetry Dashboard
+            </p>
+            <h3 className="text-lg font-semibold mb-3 tracking-tight">
+              Race-strategy dashboard, built with AI tools
+            </h3>
+            <p className="text-base italic mb-8">
+              Real-time telemetry and race-strategy dashboard for PSU Eco Team III&rsquo;s Shell
+              Eco-marathon entry. Live MQTT data streaming, GPS integration, and a connected ML
+              model that surfaces driving cues for energy efficiency. Built end-to-end using Cursor
+              and AI tools for rapid frontend development. Used in international competition.
+            </p>
+            <figure>
+              <div style={{ maxWidth: 720, margin: '0 auto' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/addons/psu-telemetry.png"
+                  alt="PSU Eco Team telemetry dashboard"
+                  className="block w-full h-auto border border-gray-200"
+                />
+                <figcaption className="text-xs italic text-muted mt-2.5 text-center">
+                  Live race telemetry view: efficiency, current speed, race timer, and GPS tracking,
+                  with ML-driven efficiency cues.
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+
+          {/* ── SAJI ──────────────────────────────────────────── */}
+          <div style={{ marginTop: 80 }}>
+            <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">
+              SAJI &middot; Multi-Role Retail System
+            </p>
+            <h3 className="text-lg font-semibold mb-3 tracking-tight">
+              Retail platform across customer, B2B, and employee roles
+            </h3>
+            <p className="text-base italic mb-8">
+              Home furnishings retailer digital surfaces, designed as a freelance engagement. The
+              system spans customer-facing storefront, B2B account flow, customer account
+              management, and an employee portal with role-based dashboards and performance
+              tracking.
+            </p>
+            <div className="flex flex-col items-center gap-8">
+              {['saji-1', 'saji-2', 'saji-3'].map((slug) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={slug}
+                  src={`/images/addons/${slug}.png`}
+                  alt={`SAJI screen ${slug.slice(-1)}`}
+                  className="w-full"
+                  style={{ maxWidth: 600 }}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Closing line */}
+          <p className="text-xs italic text-muted text-center mt-16">
+            Additional interactive prototypes and Figma files available on request.
+          </p>
+        </section>
+
+        {/* ─── TOOLS AND CRAFT ──────────────────────────────────── */}
+        <section id="tools" className="mb-20 md:mb-28">
+          <h2 className="text-xl font-semibold mb-10">Tools and craft</h2>
+          <div className="space-y-8 text-base leading-relaxed">
+            <p>
+              <em>Design.</em>{' '}
+              Figma, Excalidraw, Adobe Creative Suite (growing proficiency).
+            </p>
+            <p>
+              <em>AI prototyping.</em>{' '}
+              Cursor, Claude, v0, Lovable. Comfortable building end-to-end working prototypes from
+              a brief.
+            </p>
+            <p>
+              <em>Research and facilitation.</em>{' '}
+              Semi-structured interviews, survey design, usability evaluation, requirements
+              engineering, stakeholder workshops.
+            </p>
+            <p>
+              <em>Engineering.</em>{' '}
+              Python, ROS2, embedded systems, computer vision, MQTT, real-time data pipelines.
+              Used when needed to ship a prototype rather than describe one.
             </p>
           </div>
         </section>
