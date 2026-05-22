@@ -23,7 +23,7 @@ export default function Page() {
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/me/about-taynam.jpg"
+              src="/images/me/hero-portrait.png"
               alt="Taynam Alzamel"
               className="hidden md:block flex-shrink-0"
               style={{ width: 100, height: 100, objectFit: 'cover', borderRadius: 4 }}
