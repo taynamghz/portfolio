@@ -541,7 +541,7 @@ export default function Page() {
               </p>
               <p>
                 I came to a position I couldn&rsquo;t ignore: I&rsquo;d been given opportunities I
-                didn&rsquo;t earn alone, in a country that took me in and built me up. Students like me
+                didn&rsquo;t earn alone, in a country that built me up. Students like me
                 &mdash; same age, same background &mdash; shouldn&rsquo;t be locked out of the same kind
                 of growth because of where the lines on the map happen to fall. I started Ruwad to begin
                 closing that gap, one team at a time.
@@ -592,7 +592,7 @@ export default function Page() {
               <CaseImage
                 src="/images/ecoshaheen/ecoshaheen-team.JPG"
                 alt="The EcoShaheen team at Shell Eco-marathon Doha"
-                caption="Shell Eco-marathon technical inspection — competing before founding EcoShaheen. This experience is what led to starting Ruwad."
+                caption="Shell Eco-marathon technical inspection, where I competed with my Saudi team. That experience led me to found Ruwad and EcoShaheen."
                 maxWidth={600}
               />
 
@@ -911,9 +911,10 @@ export default function Page() {
             />
           </div>
           <p className="text-base mb-5">
-            I&rsquo;m based in Riyadh. I studied Software Engineering at Prince Sultan University, with a
-            track in AI and Data Science. The gap between what students here have access to and what students
-            in Damascus often don&rsquo;t &mdash; shapes most of the work I do.
+            I&rsquo;m based in Riyadh, where I studied Software Engineering at Prince Sultan University with
+            a track in AI and Data Science. I&rsquo;m Syrian by background, and the gap between what
+            students here have access to and what students in Damascus often don&rsquo;t shapes most of the
+            work I do.
           </p>
           <p className="text-base mb-5">
             The work that doesn&rsquo;t appear above includes the Saudi Space Agency case study competition
@@ -922,6 +923,11 @@ export default function Page() {
             Sumo Robot competitions at Saudi Robotics Federation and PSU, and the Shell Eco-marathon
             Autonomous entry I&rsquo;m currently leading as perception and software lead for PSU ECO
             TEAM III.
+          </p>
+          <p className="text-base mb-5">
+            Most of my work sits at the intersection of AI, design, and institutional systems &mdash;
+            figuring out how to build things in environments where the standard playbook doesn&rsquo;t fit.
+            That&rsquo;s the work I want to keep doing.
           </p>
           <p className="text-sm text-muted">
             <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
