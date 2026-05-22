@@ -945,6 +945,10 @@ export default function Page() {
               <a href="mailto:taynamghz@gmail.com">taynamghz@gmail.com</a>
             </p>
             <p>
+              Phone:{' '}
+              <a href="tel:+966543594170">+966 54 359 4170</a>
+            </p>
+            <p>
               <a
                 href="https://linkedin.com/in/taynam-alzamel"
                 target="_blank"
@@ -952,13 +956,12 @@ export default function Page() {
               >
                 LinkedIn
               </a>
-              {/* TODO: confirm LinkedIn URL slug */}
             </p>
           </div>
           <p className="text-base">
-            I&rsquo;m in Riyadh and open to conversations about innovation work, AI product design, and
-            regional engineering initiatives &mdash; particularly anything intersecting Vision 2030 with the
-            design questions I&rsquo;m interested in.
+            I&rsquo;m in Riyadh and open to conversations about innovation work, AI product design, rapid
+            prototyping and R&amp;D, and regional engineering initiatives &mdash; particularly anything
+            intersecting Vision 2030 with the design questions I&rsquo;m interested in.
           </p>
         </section>
 
