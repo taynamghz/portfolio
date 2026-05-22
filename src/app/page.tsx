@@ -1064,35 +1064,35 @@ function StakeholdersCard() {
     <figure>
       <div style={{ maxWidth: 560, margin: '0 auto' }}>
         <div className="border border-gray-200 bg-white">
-          <div className="grid grid-cols-2 divide-x divide-gray-200">
+          <div className="grid grid-cols-2 divide-x divide-gray-200" style={{ minHeight: 200 }}>
 
-            {/* Internal — ClickUp centered vertically */}
-            <div className="flex flex-col items-center justify-center gap-6 p-8">
+            {/* Internal — label top, logo centered in remaining space */}
+            <div className="flex flex-col items-center p-8">
               <p className="text-[9px] uppercase tracking-widest text-muted text-center">
                 Internal Communication
               </p>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/rasd/clickuplogo.png"
-                alt="ClickUp"
-                style={{ width: 108, height: 30, objectFit: 'contain' }}
-              />
+              <div className="flex flex-1 items-center justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/rasd/clickuplogo.png"
+                  alt="ClickUp"
+                  style={{ width: 108, height: 30, objectFit: 'contain' }}
+                />
+              </div>
             </div>
 
-            {/* External — CEER + Municipality stacked, equal width budget */}
-            <div className="flex flex-col items-center justify-center gap-6 p-8">
+            {/* External — label top, logos centered in remaining space */}
+            <div className="flex flex-col items-center p-8">
               <p className="text-[9px] uppercase tracking-widest text-muted text-center">
                 External Communication
               </p>
-              <div className="flex flex-col items-center gap-5">
-                {/* CEER: wide wordmark — give it width room */}
+              <div className="flex flex-1 flex-col items-center justify-center gap-5">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/rasd/ceer-new-logo.png"
                   alt="CEER Motors"
                   style={{ width: 108, height: 30, objectFit: 'contain' }}
                 />
-                {/* Municipality: circular — square box */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/rasd/municipality-logo.png"
