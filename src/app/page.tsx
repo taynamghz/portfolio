@@ -930,7 +930,7 @@ export default function Page() {
             That&rsquo;s the work I want to keep doing.
           </p>
           <p className="text-sm text-muted">
-            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/Taynam_AlZamel_CV.pdf" target="_blank" rel="noopener noreferrer">
               Download CV (PDF) &rarr;
             </a>
           </p>
@@ -950,7 +950,7 @@ export default function Page() {
             </p>
             <p>
               <a
-                href="https://linkedin.com/in/taynam-alzamel"
+                href="https://www.linkedin.com/in/taynamghz/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
