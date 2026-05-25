@@ -90,7 +90,7 @@ export default function Page() {
               id="sarj-ai"
               slug="SARJ AI"
               title="Designing trust into Arabic voice agents"
-              meta="7-month co-op · Quality, Product, AI Engineering · Tools shipped to internal teams and client-facing platform · 2024–2025"
+              meta="7-month co-op · Quality, Product, AI Engineering · Tools shipped to internal teams and client-facing platform · January 2026–present"
               readTime="6 min read"
             >
               <h3>The company</h3>
@@ -412,7 +412,7 @@ export default function Page() {
               id="etmaen"
               slug="ETMA'EN"
               title="Medication safety for a healthcare system that can't share data"
-              meta="PSU AI Hackathon · 1st place under the Ministry of Health · Team of 4 · 4 interviews, 71 survey responses · 2024"
+              meta="PSU AI Hackathon · 1st place under the Ministry of Health · Team of 4 · 4 interviews, 71 survey responses · 2025"
               readTime="3 min read"
             >
               <h3>The constraint everyone else was ignoring</h3>
@@ -504,7 +504,7 @@ export default function Page() {
               <CaseImage
                 src="/images/etmaen/etmaen-team.png"
                 alt="The Etma'en team at the PSU AI Hackathon"
-                caption="The Etma'en team at the PSU AI Hackathon under the Ministry of Health, 2024. From left: Mira Kasem, Aljowharah Aljubair, myself, Leen Hashem."
+                caption="The Etma'en team at the PSU AI Hackathon under the Ministry of Health, 2025. From left: Mira Kasem, Aljowharah Aljubair, myself, Leen Hashem."
                 maxWidth={600}
               />
             </CaseStudy>
@@ -918,7 +918,7 @@ export default function Page() {
           </p>
           <p className="text-base mb-5">
             The work that doesn&rsquo;t appear above includes the Saudi Space Agency case study competition
-            (Best Solution, 2025), Industry 4.0 Lab where I&rsquo;ve been Programming Head since 2022, the
+            (Best Solution, 2025), Industry 4.0 Lab where I&rsquo;ve been Programming Head since 2024, the
             Sahem Social Entrepreneurship Hackathon (1st place, King Khalid Foundation), VEX Robotics and
             Sumo Robot competitions at Saudi Robotics Federation and PSU, and the Shell Eco-marathon
             Autonomous entry I&rsquo;m currently leading as perception and software lead for PSU ECO
@@ -930,7 +930,7 @@ export default function Page() {
             That&rsquo;s the work I want to keep doing.
           </p>
           <p className="text-sm text-muted">
-            <a href="/Taynam_AlZamel_CV.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/TaynamAlZamel_CV_.pdf" target="_blank" rel="noopener noreferrer">
               Download CV (PDF) &rarr;
             </a>
           </p>
